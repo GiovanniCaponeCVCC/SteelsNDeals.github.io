@@ -1,0 +1,220 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #758182;/*changes the background color.*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/*changes the font.*/
+  color: #333333;/*makes everything the same font color.*/
+}
+
+caption {
+  color: #333333;/*changes font color of the captions to match the font color of the website.*/
+}
+
+.jumbotron {
+  border-bottom: 3px solid black;/*adds a solid black line to the bottom of the jumbotron as a separator*/
+}
+
+.fade{
+  animation: fade-in 3s forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+li .img-rounded {
+  width: 40em;/*gives every car listing image the same width.*/
+  height: 20em;/*gives every car listing image the same height.*/
+  /*centers the images.*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  object-fit: cover;/*makes the images fit the sizes without changing the aspect ratio.*/
+}
+
+.img-rounded {
+  border: 3px solid black;/*adds a solid black border around rounded images.*/
+}
+
+hr {
+  border: 1px solid black;/*changes the hr tags to be black instead of grey.*/
+}
+
+a:link, a:visited {
+  color: #333333;/*makes the a tags the same color as everything else.*/
+  text-decoration: none;/*removes underline from a tags.*/
+}
+
+a:hover, a:active {
+  color: violet;/*changes the color of the a tags to a bright color when hovered over.*/
+  text-decoration: underline;/*adds an underline to the a tag when hovered over.*/
+}
+
+ul#items {
+  padding: 0px;
+}
+
+table {
+  background-color: #B5C1C1;/*changes the background color of the tables to make them easier to read.*/
+}
+
+table, thead{
+  border:1px solid black;/*adds a solid black border around the table and thead tags.*/
+  width:80%;/*makes the table and thead take up 80% of the parent.*/
+  text-align: center;/*makes the text within the table cells centered.*/
+  
+}
+td,th{
+  border:1px solid black;/*adds a solid black border around the td and th tags.*/
+  width:50%;/*makes the td and th take up 50% of the parent.*/
+  text-align: center;/*makes the text within the table cells centered.*/
+}
+
+.col-sm-6 {
+  padding: 0px;/*removes padding from anything with the col-sm-6 class.*/
+}
+
+.col-sm-6 p {
+  margin: 0px;/*removes padding from p tags within something with the col-sm-6 class.*/
+}
+
+
+@media only screen and (max-width: 480px) {
+  /*makes the logo in the jumbotron have max width and height on smartphones.*/
+  .jumbotron img {
+    width: 100%;
+    height: 100%;
+  }
+  /*changes the salse reps' photos to scale down to phones*/
+  .col-xs-4 .img-rounded {
+    width: 10em;
+    height: 15em;
+  }
+  /*scales down the car listing images to fit on phones*/
+  li .img-rounded {
+    width: 20em;
+    height: 10em;
+  }
+
+  input#myInput {
+    width: 50%;
+    padding: 3px 5px 3px 10px;
+    float: left;
+  }
+  
+  table{
+    width:100%;
+    
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /*makes the logo in the jumbotron have max width and height on tablets.*/
+  .jumbotron img {
+    width: 100%;
+    height: 100%;
+  }
+  /*changes the salse reps' photos to scale down to tablets*/
+  .col-xs-4 .img-rounded {
+    width: 15em;
+    height: 22.5em;
+  }
+  /*scales down the car listing images to fit on tablets*/
+  li .img-rounded {
+    width: 30em;
+    height: 15em;
+  }
+
+  input#myInput {
+    width: 50%;
+    padding: 3px 5px 3px 10px;
+    float: left;
+  }
+
+  table{
+    width:100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /*changes the logo's size on computers.*/
+  .jumbotron img {
+    width: 550px;
+    height: 300px;
+  }
+  /*changes the size of the sales reps to be the same.*/
+  .col-xs-4 .img-rounded {
+    width: 20em;
+    height: 30em;
+  }
+
+  #myUL li {
+    width: 50%;/*makes the box around the cars smaller on the car list page.*/
+    /*centers the li tags in the car list page.*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table{
+    margin-left: 69px;/*moves the table more under the weekly hours title.*/
+  }
+}
+
+.color{
+  background:white
+}
+
+#car{
+  width: 100%;
+  height: auto;
+}
+
+#slogan{
+  border: solid black 1px
+}
+
+#about{
+   background-color: #B5C1C1;/*makes the about more readable.*/
+  border: solid black 1px;
+  padding: 2px;
+}
+
+.jumbotron{
+   background-color: #F3F6FD;
+}
+
+#person1, #person2, #person3, #person4 {
+  background-color: #B5C1C1;
+  border: solid black 1px;
+}
+
+#top-margin{
+  margin-top: 60px;
+}
+
+#info-color{
+  background-color: #B5C1C1;
+  padding-top: 25px;
+  border: solid black 1px;
+}
+
+
+ul#myUL li {
+  /*adds a border on the left and right of the inside list items*/
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+ul#myUL li.top {
+  border-top: 4px solid black;/*adds a border to the top of the first car to close the border on the top*/
+}
+
+ul#myUL li.bottom {
+  border-bottom: 3px solid black;/*adds a border to the bottom of the last car to close the border on the bottom*/
+}

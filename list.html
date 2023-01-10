@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Custom styles for this template -->
+        <link href="blog.css" rel="stylesheet">
+        <title>Car Listings</title>
+        <link rel="icon" href="logo.png">
+        <link href="style.css" rel="stylesheet" type="text/css"> <!-- Links the main style sheey -->
+        <link href="list.css" rel="stylesheet"> <!-- Links the cs for the list -->
+        
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="logo.png" width="75" height="34" alt="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="list.html">Car Listings</a></li>
+            <li><a href="sales.html">Sales Representatives </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Car Listings</h1>      
+      </div>
+    </div>
+    
+  
+    <div class="container-fluid bg-3 text-center">  
+  
+    <form id="filter-form" class="block">
+            <label for="myInput"></label>
+            <input onkeyup="search()" id="myInput" type="text" placeholder="Search...">
+          </form>
+    
+    <script>
+      function search() {
+        var input, filter, ul, li, a, i, txtValue; // Creates Variables
+        input = document.getElementById('myInput'); // Get the users input from the form with the id "myInput"
+        filter = input.value.toUpperCase(); // Changes the input to all caps
+        ul = document.getElementById("myUL"); // Gets the list wih the id "myUL"
+        li = ul.getElementsByTagName('li'); // Gets each list item
+  
+        for (i = 0; i < li.length; i++) {  // Set a loop to check every list item
+          a = li[i].getElementsByTagName("a")[0]; // Sets the variable "a" to an <a> tag
+          txtValue = a.textContent || a.innerText; // Sets the variable "txtValue" to text displayed in an <a> tag
+          if (txtValue.toUpperCase().indexOf(filter) > -1) { // Compares the text that is displayed to the text that is entered by the user
+            li[i].style.display = ""; // Removes all display formatting
+          } else {
+            li[i].style.display = "none"; // If the item wasn't searched for it removes it
+          }
+        }
+      }
+    </script>
+      
+    <ul id="myUL"> <!-- List that holds each car listing-->
+      <li class="top"> <a href="jwrangler.html"> 2017 Jeep Wrangler $34,800 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Jeep_TJ_Wrangler_Rubicon.jpg" class="img-responsive img-rounded" alt="Jeep Wrangler"></a></li>
+      
+      <li><a href="jcompass.html">2015 Jeep Compass $19,800 <img src="https://images.unsplash.com/photo-1511527844068-006b95d162c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-responsive img-rounded" alt="Jeep Compass"> </a></li>
+  
+      <li><a href="jpatriot.html">2014 Jeep Patriot $17,000 <img src="https://images.unsplash.com/photo-1497483996262-df5caae87573?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8amVlcCUyMHBhdHJpb3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-responsive img-rounded" alt="Jeep Patriot"></a></li>
+     
+      <li><a href="ksoul.html">2014 Kia Soul $15,495 <img src="https://images.unsplash.com/photo-1592805723127-004b174a1798?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="img-responsive img-rounded" alt="Kia Soul"></a></li>
+  
+      <li><a href="kseltos.html">2020 Kia Seltos $24,610 <img src="https://images.unsplash.com/photo-1659406189166-7c17fe5df12a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-responsive img-rounded" alt="Kia Seltos"></a></li>
+     
+      <li><a href="ksorento.html">2019 Kia Sorento $47,000 <img src="https://images.unsplash.com/photo-1644914342074-623dfef53960?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-responsive img-rounded" alt="Kia Sorento"></a></li>
+   
+      <li><a href="ksportage.html">2021 Kia Sportage $25,110 <img src="https://images.unsplash.com/photo-1647588854348-f3b37a0f0ef7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80" class="img-responsive img-rounded" alt="Kia Sportage"></a></li>
+  
+      <li><a href="csilverado.html">2016 Chevy Silverado $33,700 <img src="https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-responsive img-rounded" alt="Chevy Silverado"></a></li>
+    
+      <li><a href="ctrailblazer.html">2012 Chevy Trailblazer $30,000 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/2021_Chevrolet_TrailBlazer_RS_AWD%2C_front_7.11.20.jpg" class="img-responsive img-rounded" alt="Chevy Trailblazer"></a></li>
+  
+      <li><a href="franger.html">2019 Ford Ranger $41,650 <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/2019_Ford_Ranger_Raptor_EcoBlue_4X4_2.0.jpg" class="img-responsive img-rounded" alt="Ford Ranger"></a></li>
+  
+      <li><a href="ff-150.html">2013 Ford F-150 $25,000 <img src="https://images.unsplash.com/photo-1590043586864-d05a4ff3ec08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-responsive img-rounded" alt="Ford F-150"></a></li>
+  
+      <li class="bottom"><a href="tcamery.html">2018 Toyota Camery $26,000 <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG95b3RhJTIwY2Ftcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-responsive img-rounded" alt="Toyota Camery"></a></li>
+     
+    </ul>
+    </div>
+    <hr>
+
+ 
+     <footer class="container-fluid text-center">
+        <h4>Contact Us</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            Email 
+            <p>
+                   Tyler H: <a href="mailto:tylerh@gmail.com">tylerh@gmail.com</a> 
+              <br> Amanda R: <a href="mailto:ramanda12@gmail.com">ramanda12@gmail.com</a> 
+              <br>Hank H:  <a href="mailto:hankh32@gmail.com">hankh32@gmail.com</a> 
+              <br>Kylie E: <a href="mailto:kylieee123@aol.com">kylieee123@aol.com</a>
+            </p> 
+          </div>
+        
+          <div class="col-xs-6">
+            Number 
+            <p> 
+                   (440) 319-6060 
+              <br> (216) 439-7530 
+              <br> (330) 132-8768 
+              <br> (220) 324-4598 
+            </p>
+          </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <p>Made by Tyler Hulten, Giovanni Capone and Jeffrey Derbin</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

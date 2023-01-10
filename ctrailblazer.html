@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Bootstrap JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"                  crossorigin="anonymous"></script>
+        <!-- Custom styles for this template -->
+        <link href="blog.css" rel="stylesheet">
+        <title>Chevy Silverado</title>
+        <link rel="icon" href="logo.png">
+        <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body id="top-margin">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="logo.png" width="75" height="34" alt="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="list.html">Car Listings</a></li>
+            <li><a href="sales.html">Sales Representatives </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+            <a href="list.html" id="back-button"> &lt; Back</a>
+          </div>
+      </div>
+      <div class="row" >
+          <div class="col-xs-12 text-center">
+            <h1>2012 Chevy Trailblazer - $30,000</h1>
+          </div>
+      </div>
+      
+      <div class="row" id="info-color">
+          <div class="col-xs-4">
+              <div class="calculator">
+        <h1>Loan Calculator</h1>
+        <p>Amount($)     :
+            <input id="amount" type="number" onchange="Calculate()" placeholder="See Above...">
+        </p>
+  
+        <p>Interest Rate  :
+            <input id="rate" type="number" onchange="Calculate()" placeholder="See Below...">
+        </p>
+  
+        <p>Months to Pay :
+            <input id="months" type="number" onchange="Calculate()" placeholder="Number of Payments...">
+        </p>
+        <h2 id="total">$</h2>
+    </div>
+    <script src="app.js"></script>
+            <div class="col-xs-4">
+          <table class="table table-hover">
+            <caption>Vehicle Details</caption>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>2012</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Make</td>
+                <td>Chevy</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+                <td>Trailblazer</td>
+              </tr>
+              <tr>
+                <td>Color</td>
+                <td>White</td>
+              </tr>
+              <tr>
+                <td>Miles</td>
+                <td>124,521</td>
+              </tr>
+               <tr>
+                <td>Interest Rate</td>
+                <td>1.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          </div>
+
+        <div class="col-xs-8">
+            <img id="car" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/2021_Chevrolet_TrailBlazer_RS_AWD%2C_front_7.11.20.jpg" alt="Chevy Trailblazer">
+          <p class="text-center">Picture taken by Kevauto and can be found <a href="https://commons.wikimedia.org/wiki/File:2021_Chevrolet_TrailBlazer_RS_AWD,_front_7.11.20.jpg">here</a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+     <footer class="container-fluid text-center">
+        <h4>Contact Us</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            Email 
+            <p>
+                   Tyler H: <a href="mailto:tylerh@gmail.com">tylerh@gmail.com</a> 
+              <br> Amanda R: <a href="mailto:ramanda12@gmail.com">ramanda12@gmail.com</a> 
+              <br>Hank H:  <a href="mailto:hankh32@gmail.com">hankh32@gmail.com</a> 
+              <br>Kylie E: <a href="mailto:kylieee123@aol.com">kylieee123@aol.com</a>
+            </p> 
+          </div>
+        
+          <div class="col-xs-6">
+            Number 
+            <p> 
+                   (440) 319-6060 
+              <br> (216) 439-7530 
+              <br> (330) 132-8768 
+              <br> (220) 324-4598 
+            </p>
+          </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <p>Made by Tyler Hulten, Giovanni Capone and Jeffrey Derbin</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
