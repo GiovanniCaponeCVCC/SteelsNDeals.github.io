@@ -204,7 +204,6 @@ td,th{
   border: solid black 1px;
 }
 
-
 ul#myUL li {
   /*adds a border on the left and right of the inside list items*/
   border-left: 3px solid black;
@@ -217,4 +216,8 @@ ul#myUL li.top {
 
 ul#myUL li.bottom {
   border-bottom: 3px solid black;/*adds a border to the bottom of the last car to close the border on the bottom*/
+}
+
+#credits{ /*changes the opacity of the required information*/
+  opacity: 0.3;
 }
